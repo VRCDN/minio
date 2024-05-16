@@ -254,4 +254,4 @@ require (
 	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 )
 
-replace github.com/minio/minio-go/v7 => ../minio-go
+replace github.com/minio/minio-go/v7 => github.com/VRCDN/minio-go/v7 v7.0.70-relaxed
