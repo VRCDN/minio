@@ -89,6 +89,7 @@ var supportedHeaders = []string{
 	"X-Minio-Replication-Server-Side-Encryption-Iv",
 	"X-Minio-Replication-Encrypted-Multipart",
 	"X-Minio-Replication-Actual-Object-Size",
+	xhttp.AmzWebsiteRedirectLocation,
 	// Add more supported headers here.
 }
 

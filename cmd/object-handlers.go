@@ -556,6 +556,13 @@ func (api objectAPIHandlers) getObjectHandler(ctx context.Context, objectAPI Obj
 		return
 	}
 
+	// Website redirect location extension. Redirect to another object or external URL
+	// works for public reads only because of the signature-less URL.
+	if objInfo.UserDefined[xhttp.AmzWebsiteRedirectLocation] != "" {
+		http.Redirect(w, r, objInfo.UserDefined[xhttp.AmzWebsiteRedirectLocation], http.StatusFound)
+		return
+	}
+
 	if !proxy.Proxy { // apply lifecycle rules only for local requests
 		// Automatically remove the object/version if an expiry lifecycle rule can be applied
 		if lc, err := globalLifecycleSys.Get(bucket); err == nil {

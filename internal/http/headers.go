@@ -96,6 +96,9 @@ const (
 	AmzObjectLockBypassGovernance = "X-Amz-Bypass-Governance-Retention"
 	AmzBucketReplicationStatus    = "X-Amz-Replication-Status"
 
+	// S3 website redirect location
+	AmzWebsiteRedirectLocation = "X-Amz-Website-Redirect-Location"
+
 	// AmzSnowballExtract will trigger unpacking of an archive content
 	AmzSnowballExtract = "X-Amz-Meta-Snowball-Auto-Extract"
 	// MinIOSnowballIgnoreDirs will skip creating empty directory objects.
